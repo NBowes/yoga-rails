@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
   def setup
-      @base_url = "Rails Daily Yoga Pose"
+      @base_url = "Your Daily Yoga Pose"
   end
 
   test "should go to root" do
@@ -12,7 +12,7 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get pages_home_url
     assert_response :success
-    assert_select "title", "Home | #{@base_url}"
+    assert_select "title", "#{@base_url}"
   end
 
   test "should get help" do
