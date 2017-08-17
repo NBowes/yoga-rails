@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title> 
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class='ui container'>
+      <header>
+        <div class='ui inverted teal menu'>
+          <div class='item'>
+            <%= link_to "Daily Yoga Pose", "#", id: "logo" %>
+          </div>
+              <%= link_to " About", "#", class:"item"%>
+              <%= link_to "Contact", "#", class:"item"%>
+              <%= link_to "Help", "#", class:"item"%>
+        </div>
+      </header>
+    </div>
+    <div class='ui center aligned container'>
+      <%= yield %>
+    </div>
   </body>
 </html>
