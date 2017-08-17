@@ -15,10 +15,14 @@
           <div class='item'>
             <%= link_to "Daily Yoga Pose", root_url, id: "logo" %>
           </div>
-              <%= link_to " About", "#", class:"item"%>
-              <%= link_to "Contact", "#", class:"item"%>
+              <%= link_to " About",pages_about_url, class:"item"%>
+              <%= link_to "Forum", pages_forum_url, class:"item"%>
               <%= link_to "Poses", pages_poses_url, class:"item"%>
-        </div>
+              <div class='right menu'>
+                <a class='item'>Sign Up </a>
+                <a class='item'>Login </a>
+              </div>
+          </div>
       </header>
     </div>
     <div class='ui center aligned container'>

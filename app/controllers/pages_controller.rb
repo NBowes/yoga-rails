@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def contact
+  def forum
   end
 end

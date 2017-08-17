@@ -27,9 +27,9 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "About | #{@base_url}"
   end
 
-  test "should get contact page" do
+  test "should get forum page" do
     get pages_contact_url
     assert_response :success
-    assert_select "title", "Contact | #{@base_url}"
+    assert_select "title", "Forum | #{@base_url}"
   end
 end
