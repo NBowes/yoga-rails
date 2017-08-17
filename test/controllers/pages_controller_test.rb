@@ -15,10 +15,10 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "#{@base_url}"
   end
 
-  test "should get help" do
-    get pages_help_url
+  test "should get other poses" do
+    get pages_poses_url
     assert_response :success
-    assert_select "title", "Help | #{@base_url}"
+    assert_select "title", "Other Poses | #{@base_url}"
   end
 
   test "should get about page" do
