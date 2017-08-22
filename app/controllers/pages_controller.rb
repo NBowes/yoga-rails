@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def forum
   end
+
+  def create_pose
+  end
 end

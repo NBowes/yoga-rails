@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/poses'
   get 'pages/forum'
+  get 'pages/create_pose'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
