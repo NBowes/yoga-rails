@@ -24,3 +24,14 @@
 .ui.large.form{
   padding-top: 30px;
 }
+
+a:not(.ui):hover {
+  background-color: #ffffff;
+}
+.ui.cards > .card .meta > a:not(.ui):hover, .ui.card .meta > a:not(.ui):hover{
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.meta {
+  pointer-events: none;
+}

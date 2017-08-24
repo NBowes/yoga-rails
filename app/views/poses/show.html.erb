@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <img class="ui centered large rounded image" src="<%=@pose.image%>">
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @pose.name %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @pose.difficulty %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pose.description %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_pose_path(@pose) %> |
+<%= link_to 'Back', poses_path %>

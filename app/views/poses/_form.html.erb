@@ -1,0 +1,49 @@
+<div class="ui one column centered grid">
+  <div class="column">
+    <div class="ui stacked segment">
+<%= form_for(pose, html: {class:'ui large form'}) do |f| %>
+  <% if pose.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pose.errors.count, "error") %> prohibited this pose from being saved:</h2>
+
+      <ul>
+      <% pose.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :difficulty %>
+    <!--- change this to rails, and add in difficulty --->
+    <select name='pose[difficulty]'>
+      <option value='Beginner'>Beginner</option>
+      <option value='Intermediate'>Intermediate</option>
+      <option value='Advanced'>Advanced</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Create Pose' , class:'ui fluid large submit button' %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

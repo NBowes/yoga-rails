@@ -33,8 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Use carrierwave for file/image uploads
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use figaro for environment variables
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

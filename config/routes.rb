@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  resources :poses
   root 'pages#home'
   get 'pages/home'
   get 'pages/about'
   get 'pages/poses'
   get 'pages/forum'
-  get 'pages/create_pose'
+
+  get 'pages/new_pose' => 'pages#new_pose'
+  post 'pages/new_pose' => 'pages#create_pose'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
