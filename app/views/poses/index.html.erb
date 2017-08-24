@@ -12,15 +12,12 @@
       <div class="meta">
         <a>Difficulty: <%= pose.difficulty %></a>
       </div>
-      <div class="description">
-        <%= pose.description %>
-      </div>
     </div>
     <div class="extra content">
       <%= pose.user_id %>
       <div class="ui two buttons">
-        <div class="ui basic green button"><%= link_to 'Edit', edit_pose_path(pose) %></div>
-        <div class="ui basic red button"><%= link_to 'Destroy', pose, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <div class="ui basic green button"><%= link_to 'Show Details', pose_path(pose) %></div>
+        <div class="ui basic red button"><%= link_to 'Delete Pose', pose, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
     </div>
   </div>
