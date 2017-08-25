@@ -1,22 +1,20 @@
 <img class="ui centered large rounded image" src="<%=@pose.image%>">
-<table class="ui teal definition table">
-  <thead>
-</thead>
-<tbody>
-    <tr>
-      <td>Name</td>
-      <td><%= @pose.name %></td>
-    </tr>
-    <tr>
-      <td>Difficulty</td>
-      <td><%= @pose.difficulty %></td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td><%= @pose.description %></td>
-    </tr>
-  </tbody>
-</table>
 
-<%= link_to 'Edit', edit_pose_path(@pose) %> |
-<%= link_to 'Back', poses_path %>
+<div class="ui top attached tabular menu">
+  <a class="item active" data-tab="first">Name</a>
+  <a class="item" data-tab="second">Difficulty</a>
+  <a class="item" data-tab="third">Description</a>
+</div>
+<div class="ui bottom attached tab segment active" data-tab="first">
+  <%= @pose.name %>
+</div>
+<div class="ui bottom attached tab segment" data-tab="second">
+  <%= @pose.difficulty %>
+</div>
+<div class="ui bottom attached tab segment" data-tab="third">
+  <%= simple_format(@pose.description) %>
+</div>
+
+<%= link_to 'Edit', edit_pose_path(@pose), class:'ui tiny button' %>
+<%= link_to 'Back', poses_path , class:'ui tiny teal button'%>
+<%= javascript_include_tag 'poses' %>
