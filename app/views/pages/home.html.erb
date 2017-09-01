@@ -11,19 +11,21 @@
 </div>
 <div class='ui two column centered grid'>
   <div class='column'>
-    <div class="ui centered card">
-  <div class="image">
-    <img src="https://semantic-ui.com/images/wireframe/image.png">
-  </div>
-  <div class="content">
-    <a class="header">Yoga Pose</a>
+  <div class="ui centered card">
+    <div class="image">
+      <img src="<%= @pose_today.image %>">
+    </div>
+    <div class="content">
+      <a class="header"><%= @pose_today.name %></a>
     <div class="meta">
-      <span class="date">Difficulty</span>
+      <span class="date"><%= @pose_today.difficulty %></span>
     </div>
-    <div class="description">
-      Yoga Pose description
+    <div class="extra content">
+      <div class="ui two buttons">
+        <div class="ui basic green button"><%= link_to 'Show Details', pose_path(@pose_today) %></div>
+        <div class="ui basic red button"><%= link_to 'Delete Pose', @pose_today, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
     </div>
   </div>
-</div>
   </div>
 </div>
